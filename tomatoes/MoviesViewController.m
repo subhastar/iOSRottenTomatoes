@@ -49,6 +49,13 @@
     if (self.movies == nil) {
         [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     }
+    
+    UIRefreshControl *refresh = [[UIRefreshControl alloc] init];
+    refresh.attributedTitle = [[NSAttributedString alloc] initWithString:@"Pull to Refresh"];
+    
+    [refresh addTarget:self action:@selector(reload)
+      forControlEvents:UIControlEventValueChanged];
+    self.refreshControl = refresh;
 }
 
 #pragma mark - Table view methods
@@ -102,6 +109,7 @@
                                self.movies = [Movie createMoviesArrayFromDictionary:moviesDictionary];
                                [self.tableView reloadData];
                                [MBProgressHUD hideHUDForView:self.view animated:YES];
+                               [self.refreshControl endRefreshing];
                            }];
 
 }
