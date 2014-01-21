@@ -10,6 +10,7 @@
 #import "MovieViewController.h"
 #import "MovieCell.h"
 #import "MBProgressHUD.h"
+#import "ErrorView.h"
 
 @interface MoviesViewController ()
 
@@ -89,6 +90,13 @@
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue]
                            completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+                               if (connectionError != nil) {
+                                   NSLog(@"in here");
+                                   CGRect rect = CGRectMake(0,0,20,20);
+                                   ErrorView *ui = [[ErrorView alloc] initWithFrame:rect];
+                                   [self.view addSubview:ui];
+                                   return;
+                               }
                                NSDictionary* object = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
                                NSDictionary * moviesDictionary = [object objectForKey:@"movies"];
                                self.movies = [Movie createMoviesArrayFromDictionary:moviesDictionary];
