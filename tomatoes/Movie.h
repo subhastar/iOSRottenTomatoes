@@ -14,6 +14,7 @@
 @property (nonatomic, strong) NSString *synopsis;
 @property (nonatomic, strong) NSString *cast;
 @property (nonatomic, strong) NSURL *imageUrl;
+@property (nonatomic, strong) NSURL *fullImageUrl;
 
 + (NSArray*)createMoviesArrayFromDictionary:(NSDictionary *)dictionary;
 

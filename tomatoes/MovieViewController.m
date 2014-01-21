@@ -7,6 +7,7 @@
 //
 
 #import "MovieViewController.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface MovieViewController ()
 
@@ -30,6 +31,8 @@
     self.title = self.movie.title;
     self.synopsisLabel.text = self.movie.synopsis;
     self.castLabel.text = self.movie.cast;
+    [self.imageView setImageWithURL:self.movie.fullImageUrl];
+
 }
 
 - (void)didReceiveMemoryWarning

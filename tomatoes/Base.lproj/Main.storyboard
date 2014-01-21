@@ -130,6 +130,7 @@
                     <navigationItem key="navigationItem" id="PmL-6e-EUF"/>
                     <connections>
                         <outlet property="castLabel" destination="jqQ-Ao-FMS" id="KVD-fK-JMC"/>
+                        <outlet property="imageView" destination="ISE-Bu-Cfh" id="lMI-gk-haD"/>
                         <outlet property="synopsisLabel" destination="hCE-2p-0VF" id="dtA-NU-vE4"/>
                     </connections>
                 </viewController>
