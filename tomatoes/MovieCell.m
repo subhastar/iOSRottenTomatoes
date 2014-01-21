@@ -8,12 +8,14 @@
 
 #import "MovieCell.h"
 #import "Movie.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface MovieCell ()
 
 @property (nonatomic, weak) IBOutlet UILabel* movieTitleLabel;
 @property (nonatomic, weak) IBOutlet UILabel* synopsisLabel;
 @property (weak, nonatomic) IBOutlet UILabel *castLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end
 
@@ -33,6 +35,8 @@
     self.movieTitleLabel.text = movie.title;
     self.synopsisLabel.text = movie.synopsis;
     self.castLabel.text = movie.cast;
+    
+    [self.imageView setImageWithURL:movie.imageUrl];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated

@@ -65,6 +65,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="castLabel" destination="JXg-Tn-gp3" id="CGl-GJ-j1V"/>
+                                    <outlet property="imageView" destination="2hl-qu-tdd" id="ITS-OJ-bgu"/>
                                     <outlet property="movieTitleLabel" destination="5hd-PB-ipg" id="VbI-8w-Fv0"/>
                                     <outlet property="synopsisLabel" destination="Y34-Jr-gG1" id="PrR-L4-URD"/>
                                 </connections>
