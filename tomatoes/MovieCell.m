@@ -7,8 +7,13 @@
 //
 
 #import "MovieCell.h"
+#import "Movie.h"
 
 @interface MovieCell ()
+
+@property (nonatomic, weak) IBOutlet UILabel* movieTitleLabel;
+@property (nonatomic, weak) IBOutlet UILabel* synopsisLabel;
+@property (weak, nonatomic) IBOutlet UILabel *castLabel;
 
 @end
 
@@ -21,6 +26,13 @@
         // Initialization code
     }
     return self;
+}
+
+- (void) setMovie:(Movie *)movie
+{
+    self.movieTitleLabel.text = movie.title;
+    self.synopsisLabel.text = movie.synopsis;
+    self.castLabel.text = movie.cast;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated

@@ -14,6 +14,6 @@
 @property (nonatomic, strong) NSString *synopsis;
 @property (nonatomic, strong) NSString *cast;
 
-- (id)initWithDictionary:(NSDictionary *)dictionary;
++ (NSArray*)createMoviesArrayFromDictionary:(NSDictionary *)dictionary;
 
 @end

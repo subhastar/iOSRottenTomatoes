@@ -55,11 +55,8 @@
 - (UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     MovieCell *cell = (MovieCell*) [tableView dequeueReusableCellWithIdentifier:@"MovieCell"];
+    cell.movie = self.movies[indexPath.row];
     
-    NSDictionary *movie = self.movies[indexPath.row];
-    
-    cell.movieTitleLabel.text = [movie objectForKey:@"title"];
-    cell.synopsisLabel.text = [movie objectForKey:@"synopsis"];
     return cell;
 }
 
@@ -79,11 +76,9 @@
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue]
                            completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
                                NSDictionary* object = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-                               self.movies  = [object objectForKey:@"movies"];
+                               NSDictionary * moviesDictionary = [object objectForKey:@"movies"];
+                               self.movies = [Movie createMoviesArrayFromDictionary:moviesDictionary];
                                [self.tableView reloadData];
-                               
-                               NSLog(@"movies: %@", self.movies);
-
                            }];
 
 }
