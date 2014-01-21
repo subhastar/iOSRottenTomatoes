@@ -12,5 +12,7 @@
 @interface MovieViewController : UIViewController
 
 @property (strong, nonatomic) Movie* movie;
+@property (weak, nonatomic) IBOutlet UILabel *synopsisLabel;
+@property (weak, nonatomic) IBOutlet UILabel *castLabel;
 
 @end

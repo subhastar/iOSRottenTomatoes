@@ -27,8 +27,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    NSLog(@"inside view did load.");
     self.title = self.movie.title;
+    self.synopsisLabel.text = self.movie.synopsis;
+    self.castLabel.text = self.movie.cast;
 }
 
 - (void)didReceiveMemoryWarning
