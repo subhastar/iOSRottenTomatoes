@@ -7,53 +7,53 @@
       buildImplicitDependencies = "YES">
       <BuildActionEntries>
          <BuildActionEntry
-            buildForAnalyzing = "YES"
             buildForTesting = "YES"
+            buildForProfiling = "YES"
             buildForArchiving = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "YES">
+            buildForAnalyzing = "YES">
             <BuildableReference
-               ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "libPods-AFNetworking.a"
-               BlueprintIdentifier = "3A4BBA8C6FDE4A7DB6822177"
                BuildableIdentifier = "primary"
-               BlueprintName = "Pods-AFNetworking">
+               BlueprintName = "Pods-AFNetworking"
+               BlueprintIdentifier = "172E6037AB2948D59D908E47"
+               BuildableName = "libPods-AFNetworking.a"
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
-      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       buildConfiguration = "Debug">
       <Testables>
       </Testables>
    </TestAction>
    <LaunchAction
+      ignoresPersistentStateOnLaunch = "NO"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      buildConfiguration = "Debug"
       debugDocumentVersioning = "YES"
       useCustomWorkingDirectory = "NO"
-      allowLocationSimulation = "YES"
-      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      buildConfiguration = "Debug"
-      ignoresPersistentStateOnLaunch = "NO"
-      launchStyle = "0">
+      launchStyle = "0"
+      allowLocationSimulation = "YES">
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
-      debugDocumentVersioning = "YES"
-      useCustomWorkingDirectory = "NO"
       savedToolIdentifier = ""
       shouldUseLaunchSchemeArgsEnv = "YES"
-      buildConfiguration = "Release">
+      buildConfiguration = "Release"
+      debugDocumentVersioning = "YES"
+      useCustomWorkingDirectory = "NO">
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
    </AnalyzeAction>
    <ArchiveAction
-      revealArchiveInOrganizer = "YES"
-      buildConfiguration = "Release">
+      buildConfiguration = "Release"
+      revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

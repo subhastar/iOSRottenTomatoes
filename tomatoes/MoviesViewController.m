@@ -9,6 +9,7 @@
 #import "MoviesViewController.h"
 #import "MovieViewController.h"
 #import "MovieCell.h"
+#import "MBProgressHUD.h"
 
 @interface MoviesViewController ()
 
@@ -44,6 +45,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    if (self.movies == nil) {
+        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    }
 }
 
 #pragma mark - Table view methods
@@ -89,6 +93,7 @@
                                NSDictionary * moviesDictionary = [object objectForKey:@"movies"];
                                self.movies = [Movie createMoviesArrayFromDictionary:moviesDictionary];
                                [self.tableView reloadData];
+                               [MBProgressHUD hideHUDForView:self.view animated:YES];
                            }];
 
 }
