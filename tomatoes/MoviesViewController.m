@@ -7,6 +7,7 @@
 //
 
 #import "MoviesViewController.h"
+#import "MovieViewController.h"
 #import "MovieCell.h"
 
 @interface MoviesViewController ()
@@ -58,6 +59,15 @@
     cell.movie = self.movies[indexPath.row];
     
     return cell;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    UITableViewCell *selectedCell = (UITableViewCell *)sender;
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:selectedCell];
+    Movie *movie = self.movies[indexPath.row];
+    
+    MovieViewController *movieViewController = (MovieViewController *)segue.destinationViewController;
+    movieViewController.movie = movie;
 }
 
 #pragma mark - Private methods
